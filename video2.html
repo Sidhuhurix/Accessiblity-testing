@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaElement.js Video Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js"></script>
+</head>
+<body>
+    <video width="440" height="260" controls>
+        <source src="Media/test video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const videoPlayer = new MediaElementPlayer('video', {
+                features: ['playpause', 'current', 'progress', 'volume', 'fullscreen'],
+                success: function(mediaElement, domObject) {
+                    mediaElement.addEventListener('canplay', function() {
+
+                        mediaElement.setMuted(false);
+                        mediaElement.setVolume(1);
+                        mediaElement.setFullscreen(true);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

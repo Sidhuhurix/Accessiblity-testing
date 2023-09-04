@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Website</title>
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e2dfdf;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #cab7b7;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 2rem 2rem 4rem;
+        }
+
+        .anchor-link {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 14px;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .block {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 14px;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Video and iframe styles */
+        video,
+        iframe {
+            width: 100%;
+            height: auto;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+    
+  
+        /* Transcript button styles */
+        #transcript-button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+        
+        #transcript-button:hover {
+            background-color: #18a05cce;
+        }
+        
+
+ 
+      
+
+       
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const transcriptButton = document.getElementById("transcript-button");
+            const transcript = document.querySelector("figcaption");
+            
+            transcriptButton.addEventListener("click", function() {
+                if (transcript.style.display === "none") {
+                    transcript.style.display = "block";
+                    transcriptButton.textContent = "Hide Transcript";
+                } else {
+                    transcript.style.display = "none";
+                    transcriptButton.textContent = "View Transcript";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Testing Website 2</h1>
+        <div class="logo-container">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuO79PSUsH1vAYFKZ2jy5QYHXdC4ZxhSKOqA&usqp=CAU" alt="Logo">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuO79PSUsH1vAYFKZ2jy5QYHXdC4ZxhSKOqA&usqp=CAU" alt="">
+        </div>
+    </header>
+    <div class="container">
+        <a class="block" href="form.html">Click here</a>
+        <a class="block" href="video1.html">video 1</a>
+        <a class="block" href="video2.html">video 2</a>
+       
+        <a class="anchor-link" href="index.html">Home</a>
+       
+        <h2>Welcome to My Website</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quae quidem vero quas incidunt, provident beatae, doloremque perferendis voluptatibus ratione mollitia ipsa neque maiores? Rem molestiae odio, accusantium cumque ab.</p>
+        
+        <h2>Sample Video</h2>
+        <video controls>
+            <source src="Media/test video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+ 
+ 
+        </video>
+        
+        <h2>YouTube Video</h2>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/CloMXuL8Img" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <h2>Audio File</h2>
+        <audio controls>
+            <source src="Media/1693387380242ydbp0i5-voicemaker.in-speech.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        
+     
+    </div>
+</body>
+</html>

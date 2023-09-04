@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          form {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #29773a;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+        }
+        header {
+            background-color: #cab7b7;
+            text-align: center;
+            padding: 1rem;
+        }
+        .block {
+            width: 80%;
+            margin: auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 2rem 2rem 4rem;
+        }
+ 
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Testing Website 2</h1>
+        <div class="logo-container">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuO79PSUsH1vAYFKZ2jy5QYHXdC4ZxhSKOqA&usqp=CAU" alt="Logo">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuO79PSUsH1vAYFKZ2jy5QYHXdC4ZxhSKOqA&usqp=CAU">
+        </div>
+    </header>
+    <div class="block">
+       <form id="contact-form" action="#" method="post">
+            <h3>Contact Us</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+</body>
+</html>
